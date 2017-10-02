@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css" media="all">
+	<title>Hugo Raguet - Preconditioning of a Generalized Forward-Backward Splitting</title>
+</head>
+
+<h1>Preconditioning of a Generalized Forward-Backward Splitting and Application to Optimization on Graphs</h1>
+
+<p>
+The preconditioning of our <a href=../gfb/index.html>generalized forward-backward splitting algorithm</a> can serve two practical purposes: first, it might accelerate the convergence, or second, it might simplify the computation of the resolvent of some operators in the splitting. In addition, we enable the economy of storage and computation concerning some auxiliary variables, when some coordinates of the problem take part only in some of the operators in the splitting.
+</p>
+
+<p>
+As a particular application, we provide an efficient method for minimizing the following functional structured on the vertices of a graph G=(V,E)</br>
+
+<table class="aligned_eqn">
+    <tr>
+        <td>&#8477;<sup>|V|</sup></td>
+        <td>&#8239;&#8239;&#8594;&#8239;&#8239;</td>
+        <td>&#8477; ,</td>
+    </tr>
+    <tr>
+        <td><i>x</i></td>
+        <td>&#8239;&#8239;&#8614;&#8239;&#8239;</td>
+        <td>
+            <span class="sum"><span class="bigg">&#8721;</span><sub>v&#8712;V</sub></span>
+            <table class="frac"><tr><td class='num'><i>&#955;</i><sub>v</sub></td></tr>
+                                   <tr><td class='den'>2</td></tr></table>
+            |<i>x</i><sub>v</sub> &#8722; <i>y</i><sub>v</sub>|<sup>2</sup> +
+            <span class="sum"><span class="bigg">&#8721;</span><sub>(u,v)&#8712;E</sub></span>
+            <i>&#956;</i><sub>uv</sub> |<i>x</i><sub>u</sub> &#8722; <i>x</i><sub>v</sub>| +
+            <span class="sum"><span class="bigg">&#8721;</span><sub>v&#8712;V</sub></span>
+            <i>&#957;</i><sub>v</sub> |<i>x</i><sub>v</sub>| ,
+        </td>
+    </tr>
+</table>
+
+where <i>y</i> &#8712; &#8477;<sup>|V|</sup> is the vector of the observation on the vertices, and <i>&#955;</i> &#8712; &#8477;<sup>|V|</sup>, <i>&#956;</i> &#8712; &#8477;<sup>|E|</sup> and <i>&#957;</i> &#8712; &#8477;<sup>|V|</sup> are weights defined over the vertices or the edges. The first term is a classical data-fidelity term, the second term is akin to a weighted total variation seminorm, and the third term is a weighted &#8467;<sub>1</sub>-norm.
+
+An implementation in MATLAB can be found below, or at 
+<a href=https://sites.google.com/site/landrieuloic/home-1>Loïc's page</a>.
+</p>
+
+Work done in collaboration with <a href=http://ligm.u-pem.fr/membres/temporaires/a3si/loic-landrieu/>Loïc Landrieu</a>.</br>
+Published in <i>SIAM Journal of Imaging Sciences</i>:
+<a href=http://dx.doi.org/10.1137/15M1018253 target=_blank>Permalink</a> - 
+<a href=Preconditioning_of_a_Generalized_Forward-Backward_Splitting_and_Application_to_Optimization_on_Graphs__HRaguet_LLandrieu__SIAMJImagSci2015.pdf target=_blank>Author's manuscript</a> - 
+<a href=Preconditioning_of_a_Generalized_Forward-Backward_Splitting_and_Application_to_Optimization_on_Graphs__HRaguet_LLandrieu__SIAMJImagSci2015.bib target=_blank>BibTeX entry</a>.</br>
+Download the <a href=PGFB_graph_d1_l1.tar.gz target=_blank>MATLAB codes and materials</a> used in the paper.</br>
+
+</br>
+</br>
+</br>
+<div align="center">
+<a href=../index.html>Back To Home</a>
+</div>
+
+</html>

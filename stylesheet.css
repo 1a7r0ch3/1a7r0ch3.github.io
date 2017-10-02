@@ -1,0 +1,290 @@
+/* stylesheet4.css for www.myphysicslab.com. created Nov 29 2010 */
+body {
+    background-color: white;
+    color: black;
+    margin: 0 0.1in;
+    /*font-family: Palatino, "Book Antiqua", Times, "Times New Roman", serif;  */
+    font-family: Georgia, "Bitstream Charter", serif;
+    line-height: 1.25em;  /* gives leading of 0.25em between lines:  1.25em - 1.0em font size */
+}
+
+applet { border: solid 1px gray; }
+
+img {
+    border: none;
+    margin: 0;
+}
+
+div { margin: 0; }
+
+p { margin: 0.5em 0.5em; }
+
+h1, h2, h3 {
+    font-family: sans-serif; 
+    clear: both; 
+}
+
+h1 { 
+    font-size: 130%;
+    margin-top: 0.2in;
+    margin-bottom: 0.2in;
+    border-top-style: none;
+    color: #328DAE;
+}  
+h1 a { text-decoration: none; }
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active { color: #328DAE; }
+
+h2 {
+    font-size: 115%;
+    margin-top: 0.1in;
+    margin-bottom: 0.1in;
+    color: #328DAE;
+}
+
+h3 {
+    margin-top: 0.1in;
+    margin-bottom: 0in;
+    font-size: 100%;
+    color: #000000;
+}
+
+/* give images a smaller centered font for picture captions */
+div.image { 
+    float: left; 
+    margin:0; 
+    text-align: center; 
+    font-size: 70%;   /* x-small */
+    font-family: sans-serif; 
+}
+
+/* for centered images */
+div.centered_image { 
+    margin:0.5em 0; 
+    text-align: center; 
+    font-size: 70%;   /* x-small */
+    font-family: sans-serif; 
+}  
+    
+div.applet-display {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+/* inline equations */
+span.inline-math { white-space: nowrap; }  
+
+.display-equation, 
+.centered { 
+    margin-top:0.5em; 
+    margin-bottom:0.5em; 
+    text-align: center; 
+    vertical-align: middle; 
+}
+
+
+/* left aligned equations. created Dec 2007*/
+span.aligned_eqn {
+   display: block;
+}
+.aligned_eqn {
+   margin-top:0.5em; 
+   margin-bottom:0.5em; 
+   margin-left: 2em;
+   text-align: left; 
+   vertical-align: middle; 
+}
+    
+table.in_frac { 
+    display:inline; 
+    margin-top:0; 
+    margin-bottom:0;
+    text-align: center; 
+    font-size: 80%;
+    vertical-align: 1.2ex; 
+}
+
+table.frac { 
+    display:inline; 
+    margin-top:0; 
+    margin-bottom:0;
+    text-align: center; 
+    vertical-align: .8ex;
+}
+
+/* (note: don't use display:block on tables, it screws up NN tables) */
+/* bigger line-height helps make eqns without ^2 more equal to those with ^2 */
+.aligned_eqn,
+.display-equation, 
+table.numbered-equation { line-height: 2em; }
+.fraction { 
+    line-height: normal; /* for when fraction is wrapped by numbered-equation */
+}  
+
+/* numbered equations done with a table */
+/* width slightly less than 100% because of bugs in IE when alongside an image
+   see dbl_pendulum page. */
+table.numbered-equation {
+    width:99%;  
+    text-align: center; 
+    vertical-align: middle;
+    margin-top:0.5em; 
+    margin-bottom:0.5em; 
+}
+
+ol {
+    margin-top:0.5ex;
+    margin-bottom:0.5ex;
+}
+
+ul.vars {
+    list-style-type:none; 
+    margin-top:0.5em; 
+    margin-bottom:0.5em;
+}
+
+/* sup and sub for sum-like operators */
+span.sum {  margin-right: .5ex; }
+.sum { line-height: 1.5; }
+.sum sub { margin-left: .1ex; }
+.sum sup { margin-left: -2.9ex; }
+
+span.in_sum {  margin-right: 2ex; }
+.in_sum sub { margin-left: .1ex; }
+.in_sum sup { margin-left: -2.9ex; }
+
+/* sup style needed for Opera (why?) */
+sup { 
+    vertical-align: 1ex; 
+    font-size:80%; 
+}
+sub { 
+    vertical-align: -0.6ex; 
+    font-size:80%; 
+}
+
+span.bigg { font-size:120%; }  /* for big math symbols */
+
+span.vector { text-decoration:overline; font-weight: bolder; font-size: 110%; }
+
+span.nobr { white-space:nowrap; }  /* for setting where to break long equations */
+
+td.den {
+    border-top:solid 1px black;
+    line-height: .9;
+} /* for horiz line in fractions */
+
+td.num {
+    line-height: .7;
+    margin-bottom:0;
+}
+.num sub {
+    line-height: .7;
+    margin-bottom:0;
+}
+
+/*td.eqn_blank { text-align:left; width:2em; } /* for left side of numbered equations */
+td.equation-number { text-align:right; width:2em; } /* for numbered equations */
+
+.emphasized {  border: solid 2px #f90; }
+div.emphasized {
+    margin: 0.5em 0; 
+    padding: 0.5em; 
+    text-align: center; 
+    border: solid 2px #f90; 
+}
+
+span.text { font-size:90%; }  /* smaller text within math expressions */
+
+p.introduction { margin: 0.4em 0; }
+  
+p.instructions, p.hint {
+  width: 640px;
+  margin: 0.8em auto;
+  font-style: italic;
+  text-align: left;
+}
+
+p.hint {
+  text-align: right;
+  font-size:80%;
+}
+
+p.list {
+    margin-top:0cm; 
+    margin-bottom:0cm; 
+    margin-left:1cm;
+}
+
+p.quote {
+  margin-top:0.5em; 
+  margin-bottom:0.5em; 
+  margin-left:1.5cm;
+  margin-right:1.5cm;
+  text-align: left;
+  font-size:90%;
+}
+
+ul.menubar {
+  padding: 4px 0;
+  margin: 0;
+  font: bold 12px Verdana, sans-serif;
+  list-style-type:none;
+}
+ul.menubar li {
+  display: inline;
+}
+ul.menubar li a {
+  border: 1px solid #778;
+  background: #DDE;
+  text-decoration: none;
+  padding: 3px 0.5em;
+  margin-left: 3px;
+  line-height: 2.0;
+  white-space: nowrap;
+}
+ul.menubar li a:link { color: #448; }
+ul.menubar li a:visited { color: #667; }
+ul.menubar li a:link:hover, ul li a:visited:hover {
+  color: #000;
+  background:#AAE;
+  border-color: #227;
+}
+ul.menubar li a#current {
+  background: white;
+  border-bottom: 1px solid white;
+}
+
+#logo {
+  float: right;
+  margin: -5px 5px 0 0;
+}
+
+#logo img {
+  border: none;  /* turns off the blue border in Firefox, maybe not needed now that border=0 on img */
+}
+
+*#copyright {
+  font: bold 12px Verdana, sans-serif;
+}
+
+*#revised_date {
+  font-weight: normal;
+  font-size: 9px;
+}
+
+p#page_history{
+  font: normal 12px Verdana, sans-serif;
+  text-align: right;
+}
+div#footer2 {
+  margin: 1.2em 0 0.3em 0;
+}
+
+.error {
+  width: 400px;
+  height: 200px;
+  border: 2px solid red;
+  padding: 10px;
+  margin-left: auto; margin-right: auto;
+}
+
