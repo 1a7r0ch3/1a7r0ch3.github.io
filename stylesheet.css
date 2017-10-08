@@ -1,10 +1,9 @@
-/* stylesheet4.css for www.myphysicslab.com. created Nov 29 2010 */
 body {
     background-color: white;
     color: black;
     margin: 0 0.1in;
-    /*font-family: Palatino, "Book Antiqua", Times, "Times New Roman", serif;  */
-    font-family: Georgia, "Bitstream Charter", serif;
+    font-family: "Open Sans", Tahoma, sans-serif;
+    /* font-family: Georgia, "Bitstream Charter", serif; */
     line-height: 1.25em;  /* gives leading of 0.25em between lines:  1.25em - 1.0em font size */
 }
 
@@ -48,6 +47,17 @@ h3 {
     color: #000000;
 }
 
+table { border-spacing: 0; }
+
+th.main, td.main {
+    vertical-align: top;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width:47%;
+}
+    
 /* give images a smaller centered font for picture captions */
 div.image { 
     float: left; 
@@ -100,7 +110,7 @@ table.in_frac {
     margin-bottom:0;
     text-align: center; 
     font-size: 80%;
-    vertical-align: 1.2ex; 
+    vertical-align: 1ex; 
 }
 
 table.frac { 
@@ -171,11 +181,15 @@ span.nobr { white-space:nowrap; }  /* for setting where to break long equations 
 td.den {
     border-top:solid 1px black;
     line-height: .9;
+    padding: 0px;
+    padding-top: 2px;
 } /* for horiz line in fractions */
 
 td.num {
     line-height: .7;
     margin-bottom:0;
+    padding: 0px;
+    padding-bottom: 2px;
 }
 .num sub {
     line-height: .7;
@@ -194,97 +208,3 @@ div.emphasized {
 }
 
 span.text { font-size:90%; }  /* smaller text within math expressions */
-
-p.introduction { margin: 0.4em 0; }
-  
-p.instructions, p.hint {
-  width: 640px;
-  margin: 0.8em auto;
-  font-style: italic;
-  text-align: left;
-}
-
-p.hint {
-  text-align: right;
-  font-size:80%;
-}
-
-p.list {
-    margin-top:0cm; 
-    margin-bottom:0cm; 
-    margin-left:1cm;
-}
-
-p.quote {
-  margin-top:0.5em; 
-  margin-bottom:0.5em; 
-  margin-left:1.5cm;
-  margin-right:1.5cm;
-  text-align: left;
-  font-size:90%;
-}
-
-ul.menubar {
-  padding: 4px 0;
-  margin: 0;
-  font: bold 12px Verdana, sans-serif;
-  list-style-type:none;
-}
-ul.menubar li {
-  display: inline;
-}
-ul.menubar li a {
-  border: 1px solid #778;
-  background: #DDE;
-  text-decoration: none;
-  padding: 3px 0.5em;
-  margin-left: 3px;
-  line-height: 2.0;
-  white-space: nowrap;
-}
-ul.menubar li a:link { color: #448; }
-ul.menubar li a:visited { color: #667; }
-ul.menubar li a:link:hover, ul li a:visited:hover {
-  color: #000;
-  background:#AAE;
-  border-color: #227;
-}
-ul.menubar li a#current {
-  background: white;
-  border-bottom: 1px solid white;
-}
-
-#logo {
-  float: right;
-  margin: -5px 5px 0 0;
-}
-
-#logo img {
-  border: none;  /* turns off the blue border in Firefox, maybe not needed now that border=0 on img */
-}
-
-*#copyright {
-  font: bold 12px Verdana, sans-serif;
-}
-
-*#revised_date {
-  font-weight: normal;
-  font-size: 9px;
-}
-
-p#page_history{
-  font: normal 12px Verdana, sans-serif;
-  text-align: right;
-}
-div#footer2 {
-  margin: 1.2em 0 0.3em 0;
-}
-
-.error {
-  width: 400px;
-  height: 200px;
-  border: 2px solid red;
-  padding: 10px;
-  margin-left: auto; margin-right: auto;
-}
-

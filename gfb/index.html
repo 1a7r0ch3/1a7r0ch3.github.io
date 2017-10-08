@@ -13,7 +13,7 @@
 An algorithmic scheme for solving, over any real Hilbert space &#8459;, monotone inclusion problems of the form</br>
 
 <span class="aligned_eqn">
-find <i>x</i> &#8712; zer { <span class="sum"><span class="bigg">&#8721;</span><sub><i>i</i>=1</sub><sup><i>n</i></sup></span> <i>A<sub>i</sub></i> + <i>B</i>  } ,</span>
+find <i>x</i> &#8712; zer <span class="bigg">{</span><span class="in_sum"><span class="bigg">&#8721;</span><sub><i>i</i>=1</sub><sup><i>n</i></sup></span> <i>A<sub>i</sub></i> + <i>B</i>  <span class="bigg">}</span> ,</span>
 
 where:</br>
 <ul>
@@ -29,7 +29,7 @@ where:</br>
 In particular, it enables minimization over &#8459; of convex problems of the form</br>
 
 <span class="aligned_eqn">
-find <i>x</i>&#8712; argmin { <span class="sum"><span class="bigg">&#8721;</span><sub><i>i</i>=1</sub><sup><i>n</i></sup></span>   <i>g<sub>i</sub></i> + <i>f</i> } ,</span>
+find <i>x</i>&#8712; argmin <span class="bigg">{</span><span class="in_sum"><span class="bigg">&#8721;</span><sub><i>i</i>=1</sub><sup><i>n</i></sup></span>   <i>g<sub>i</sub></i> + <i>f</i> <span class="bigg">}</span> ,</span>
 
 where:</br>
 <ul>
@@ -37,7 +37,7 @@ where:</br>
 	<li><i>f</i> is differentiable with Lipschitz-continuous gradient,</li>
 	<li>for all <i>i</i> &#8712; {1,&#8230;,n}, <i>g<sub>i</sub></i> is simple, in the sense that we can compute easily its proximity operator:
     <span class="inline-math">prox<sub><i>g<sub>i</sub></i></sub>: <i>x</i> &#8614; argmin<sub><i>y</i>&#8712;&#8459;</sub> &#8239;
-    { <table class="in_frac"><tr><td class="num">1</td></tr><tr><td class="den">2</td></tr></table>||<i>x</i> &#8722; <i>y</i>||<sup>2</sup> + <i>g<sub>i</sub></i>(<i>y</i>) } </span>.
+    <span class="bigg">{</span> <table class="in_frac"><tr><td class="num">1</td></tr><tr><td class="den">2</td></tr></table>||<i>x</i> &#8722; <i>y</i>||<sup>2</sup> + <i>g<sub>i</sub></i>(<i>y</i>) <span class="bigg">}</span> </span>.
     </li>
 </ul>
 </p>
@@ -48,17 +48,19 @@ Published in <i>SIAM Journal of Imaging Sciences</i>:
 <a href=A_Generalized_Forward-Backward_Splitting__HRaguet_etal__SIAMJImagSci2013.pdf target=_blank>Author's manuscript</a> - 
 <a href=A_Generalized_Forward-Backward_Splitting__HRaguet_etal__SIAMJImagSci2013.bib target=_blank>BibTeX entry</a>.</br>
 <i>Erratum</i>: on top of page 10 (1208 in the volume), in the application of the Sherman–Morrison–Woodbury formula in equation (3.3), a factor &gamma; has been forgotten.</br>
-Download <a href=PaperRessources.tar.gz target=_blank>MATLAB codes and materials</a> used in this paper.</br>
-Some supplementary results:
-<a href=deblurring.tar.gz target=_blank>deblurring task</a> -
-<a href=inpainting.tar.gz target=_blank>inpainting task</a> -
-<a href=composite.tar.gz target=_blank>composite task</a> -
-<a href=composite-tv.tar.gz target=_blank>composite task with TV regularization</a>.</br>
+
+Source code of numerical simulations used in the paper is not maintained anymore, feel free to <a href=../contact/index.html>contact me</a> for any question.</br>
+
 
 </br>
 A more complete version of this work can be found in chapters III and IV of my <a href=../phd/index.html>Ph.D. thesis</a>.
 </br>
 See also the <a href=../pgfb/index.html>preconditioned version</a>.
+</br>
+
+</br>
+Check out <a href=A_Note_Forward-Douglas–Rachford_Splitting_Monotone_Inclusion_Convex_Optimization_HRaguet_2017.pdf>my note</a> on the forward-Douglas–Rachford and the so-called “three operator splitting scheme”, which are only slight modification of our generalized forward-backward algorithm.
+</br>
 
 </br>
 </br>
