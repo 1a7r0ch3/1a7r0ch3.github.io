@@ -14,31 +14,19 @@ The preconditioning of our <a href=../gfb/index.html>generalized forward-backwar
 </p>
 
 <p>
-As a particular application, we provide an efficient method for minimizing the following functional structured on the vertices of a graph G = (V, E)</br>
+As a particular application, we provide an efficient method for minimizing the following functional structured on the vertices of a graph <i>G</i> = (<i>V</i>, <i>E</i>)</br></br>
 
-<table class="aligned_eqn">
-    <tr>
-        <td>&#8477;<sup>V</sup></td>
-        <td>&#8239;&#8239;&#8594;&#8239;&#8239;</td>
-        <td>&#8477; ,</td>
-    </tr>
-    <tr>
-        <td><i>x</i></td>
-        <td>&#8239;&#8239;&#8614;&#8239;&#8239;</td>
-        <td>
-            <span class="sum"><span class="bigg">&#8721;</span><sub>v&#8712;V</sub></span>
-            <table class="frac"><tr><td class='num'><i>&#955;</i><sub>v</sub></td></tr>
-                                   <tr><td class='den'>2</td></tr></table>
-            |<i>x</i><sub>v</sub> &#8722; <i>y</i><sub>v</sub>|<sup>2</sup> +
-            <span class="sum"><span class="bigg">&#8721;</span><sub>(u,v)&#8712;E</sub></span>
-            <i>&#956;</i><sub>uv</sub> |<i>x</i><sub>u</sub> &#8722; <i>x</i><sub>v</sub>| +
-            <span class="sum"><span class="bigg">&#8721;</span><sub>v&#8712;V</sub></span>
-            <i>&#957;</i><sub>v</sub> |<i>x</i><sub>v</sub>| ,
-        </td>
-    </tr>
-</table>
+     ℝ<sup><i>V</i></sup> → ℝ</br>
 
-where <i>y</i> &#8712; &#8477;<sup>V</sup> is the vector of the observation on the vertices, and <i>&#955;</i> &#8712; &#8477;<sup>V</sup>, <i>&#956;</i> &#8712; &#8477;<sup>E</sup> and <i>&#957;</i> &#8712; &#8477;<sup>V</sup> are weights defined over the vertices or the edges. The first term is a classical data-fidelity term, the second term is akin to a weighted total variation seminorm, and the third term is a weighted &#8467;<sub>1</sub>-norm.
+     <i>x</i> ↦  ∑<sub><i>v</i>∈<i>V</i></sub> <i>λ</i><sub><i>v</i></sub>/2 |<i>x</i><sub><i>v</i></sub> − <i>y</i><sub><i>v</i></sub>|<sup>2</sup> +
+          ∑<sub>(<i>u</i>,<i>v</i>)∈<i>E</i></sub> <i>μ</i><sub>(<i>u</i>,<i>v</i>)</sub>
+           |<i>x</i><sub><i>u</i></sub> − <i>x</i><sub><i>v</i></sub>| +
+          ∑<sub><i>v</i>∈<i>V</i></sub> <i>ν</i><sub><i>v</i></sub>
+            |<i>x</i><sub><i>v</i></sub>| ,</br></br>
+
+where <i>y</i> ∈ ℝ<sup><i>V</i></sup> is the vector of the observation on the vertices, and
+<i>λ</i> ∈ ℝ<sup><i>V</i></sup>, <i>μ</i> ∈ ℝ<sup><i>E</i></sup> and <i>ν</i> ∈ ℝ<sup>V</sup>
+are weights defined over the vertices or the edges. The first term is a classical data-fidelity term, the second term is akin to a weighted total variation seminorm, and the third term is a weighted ℓ<sub>1</sub>-norm.
 </p>
 
 Work done in collaboration with <a href=http://ligm.u-pem.fr/membres/temporaires/a3si/loic-landrieu/>Loïc Landrieu</a>.</br>

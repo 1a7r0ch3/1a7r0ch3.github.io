@@ -7,8 +7,6 @@ body {
     line-height: 1.25em;  /* gives leading of 0.25em between lines:  1.25em - 1.0em font size */
 }
 
-applet { border: solid 1px gray; }
-
 img {
     border: none;
     margin: 0;
@@ -58,52 +56,6 @@ th.main, td.main {
     width:47%;
 }
     
-/* give images a smaller centered font for picture captions */
-div.image { 
-    float: left; 
-    margin:0; 
-    text-align: center; 
-    font-size: 70%;   /* x-small */
-    font-family: sans-serif; 
-}
-
-/* for centered images */
-div.centered_image { 
-    margin:0.5em 0; 
-    text-align: center; 
-    font-size: 70%;   /* x-small */
-    font-family: sans-serif; 
-}  
-    
-div.applet-display {
-  text-align: center;
-  margin: 0.5em 0;
-}
-
-/* inline equations */
-span.inline-math { white-space: nowrap; }  
-
-.display-equation, 
-.centered { 
-    margin-top:0.5em; 
-    margin-bottom:0.5em; 
-    text-align: center; 
-    vertical-align: middle; 
-}
-
-
-/* left aligned equations. created Dec 2007*/
-span.aligned_eqn {
-   display: block;
-}
-.aligned_eqn {
-   margin-top:0.5em; 
-   margin-bottom:0.5em; 
-   margin-left: 2em;
-   text-align: left; 
-   vertical-align: middle; 
-}
-    
 table.in_frac { 
     display:inline; 
     margin-top:0; 
@@ -119,37 +71,6 @@ table.frac {
     margin-bottom:0;
     text-align: center; 
     vertical-align: .8ex;
-}
-
-/* (note: don't use display:block on tables, it screws up NN tables) */
-/* bigger line-height helps make eqns without ^2 more equal to those with ^2 */
-.aligned_eqn,
-.display-equation, 
-table.numbered-equation { line-height: 2em; }
-.fraction { 
-    line-height: normal; /* for when fraction is wrapped by numbered-equation */
-}  
-
-/* numbered equations done with a table */
-/* width slightly less than 100% because of bugs in IE when alongside an image
-   see dbl_pendulum page. */
-table.numbered-equation {
-    width:99%;  
-    text-align: center; 
-    vertical-align: middle;
-    margin-top:0.5em; 
-    margin-bottom:0.5em; 
-}
-
-ol {
-    margin-top:0.5ex;
-    margin-bottom:0.5ex;
-}
-
-ul.vars {
-    list-style-type:none; 
-    margin-top:0.5em; 
-    margin-bottom:0.5em;
 }
 
 /* sup and sub for sum-like operators */
@@ -174,10 +95,6 @@ sub {
 
 span.bigg { font-size:120%; }  /* for big math symbols */
 
-span.vector { text-decoration:overline; font-weight: bolder; font-size: 110%; }
-
-span.nobr { white-space:nowrap; }  /* for setting where to break long equations */
-
 td.den {
     border-top:solid 1px black;
     line-height: .9;
@@ -195,16 +112,3 @@ td.num {
     line-height: .7;
     margin-bottom:0;
 }
-
-/*td.eqn_blank { text-align:left; width:2em; } /* for left side of numbered equations */
-td.equation-number { text-align:right; width:2em; } /* for numbered equations */
-
-.emphasized {  border: solid 2px #f90; }
-div.emphasized {
-    margin: 0.5em 0; 
-    padding: 0.5em; 
-    text-align: center; 
-    border: solid 2px #f90; 
-}
-
-span.text { font-size:90%; }  /* smaller text within math expressions */
