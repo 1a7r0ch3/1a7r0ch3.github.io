@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css" media="all">
+	<title>Hugo Raguet - A Note On the Forward-Douglas‒Rachford</title>
+</head>
+
+<h1>A Note On the Forward-Douglas‒Rachford Splitting Algorithm and its Application to Convex Optimization</h1>
+
+For solving the monotone inclusion problem</br>
+
+</br>
+    find <i>x</i> ∈ zer{A + B} ,
+</br></br>
+
+where <i>B</i> has sufficient regularity, the <b>forward-backward</b> splitting algorithm is essentially the repeated application of the operator</br>
+
+</br>
+    <i>T</i><sub>FB</sub> := <i>J</i><sub><i>A</i></sub>(Id − <i>B</i>) ,
+</br></br>
+
+where <i>J</i><sub><i>A</i></sub> := (Id + <i>A</i>)<sup>−1</sup> is the resolvent of <i>A</i>.</br>
+
+In <i>T</i><sub>FB</sub>, the resolvent of <i>A</i> and the application <i>B</i> are done separately, hence the term of <i>splitting</i>.
+This is useful in many applications, in particular for finding a minimum of a sum of convex functions, that is <i>A</i> plays the role of the subdifferential of a simple nonsmooth functional and <i>B</i> plays the role of the differential of a smooth functional.
+</br>
+
+Now, for solving the monotone inclusion problem</br>
+
+</br>
+    find <i>x</i> ∈ zer{A + C} ,
+</br></br>
+
+when <i>C</i> does not have the required regularity of <i>B</i> above (in convex optimization, when it is also a subdifferential of a nonsmooth functional), one call call on the <b>Douglas‒Rachford</b> splitting algorithm, which is essentially the repeated application of the operator</br>
+
+</br>
+    <i>T</i><sub>DR</sub> := 
+    1/2(<i>R</i><sub><i>A</i> </sub><i>R</i><sub><i>C</i></sub> + Id) =
+    <i>J</i><sub><i>A</i></sub>(2<i>J</i><sub><i>C</i></sub> − Id) +
+    (Id − <i>J</i><sub><i>C</i></sub>) .
+</br></br>
+
+where we conveniently noted <i>R</i><sub><i>A</i></sub> := 2<i>J</i><sub><i>A</i></sub> − Id.
+These algorithms has been known at least since the work of Lions and Mercier (1979).</br>
+
+</br>
+The extension of the Douglas‒Rachford algorithms to a splitting of an arbitrary number of operators has been pretty straightforward. However, tackling</br>
+
+</br>
+    find <i>x</i> ∈ zer{ ∑<sub><i>i</i></sub> A<sub><i>i</i></sub> + B} ,  
+</br></br>
+
+with both full splitting of the operators <i>and</i> enjoying the regularity of <i>B</i> was not possible until our <a href="../gfb/index.html">generalized forward-backward</a> which we developed in 2013. It consists in duplicating the research space as many times as there are nonsmooth operators in the splitting, and in this augmented space, repeating applications of the following operator</br>
+
+</br>
+    <i>T</i><sub>GFB</sub> := 
+    1/2(<i>R</i><sub><i>A</i> </sub><i>R</i><sub><i>S</i></sub> + Id)
+       (Id −<i>B</i><i>P</i><sub><i>S</i></sub>)
+    = <i>J</i><sub><i>A</i></sub>(2<i>P</i><sub><i>S</i></sub> − Id −
+                                <i>B</i><i>P</i><sub><i>S</i></sub>) +
+    (Id − <i>P</i><sub><i>S</i></sub>) ,
+</br></br>
+
+where <i>J<sub><i>A</i></sub></i> denotes here the parallel application of the resolvent of the <i>A</i><sub><i>i</i></sub>'s, <i>P</i><sub><i>S</i></sub> is the orthogonal projector over the first diagonal of the augmented space (set all auxiliary variables equal to their average), and </sub><i>R</i><sub><i>S</i></sub> := 2</sub><i>P</i><sub><i>S</i></sub> − Id.</br>
+This proved rather useful, since modern signal processing or machine learning tools are formulated as minimizations of structured sum of smooth functionals with several additional nonsmooth ones.</br>
+
+</br>
+Not long after, Briceño-Arias (2015) realizes one can replace the set <i>S</i> above by any closed vector space <i>V</i> without changing anything of the above operator <i>T</i><sub>GFB</sub> (in the first form given, the second becomes 
+  <i>J</i><sub><i>A</i></sub>(2<i>P</i><sub><i>V</i></sub> − Id −
+                          <i>P</i><sub><i>V</i></sub><i>B</i><i>P</i><sub><i>V</i></sub>) +
+        (Id − <i>P</i><sub><i>V</i></sub>)
+in all generality, note the additional projection on <i>V</i>).
+Although he does not even attempt at showing instances where this might be useful, this apparently is enough to get a publication in <i>Optimization</i>. He does find a name much fancier than ours though: <b>forward-Douglas−Rachford</b>.
+Indeed, the operator <i>T</i><sub>GFB</sub> really looks like the fusion of <i>T</i><sub>FB</sub> and <i>T</i><sub>DR</sub>.</br>
+However, the analogy is not perfectly suitable yet, because one cannot tackle an additional arbitrary monotone operator <i>C</i> just as the Douglas−Rachford operator <i>T</i><sub>DR</sub> does. But comes along Davis and Yin (2015), realizing <i>an orthogonal projector 
+<i>P</i><sub><i>S</i></sub>
+is nothing but the resolvent of a normal cone
+<i>J</i><sub><i>N</i><sub><i>S</i></sub></sub>
+</i>. Replacing the normal cone <i>N</i><sub><i>S</i></sub> by the arbitrary <i>C</i> in <i>T</i><sub>GFB</sub> yields the following operator</br>
+
+</br>
+    <i>T</i><sub>FDR</sub> :=
+    <i>J</i><sub><i>A</i></sub>(2<i>J</i><sub><i>C</i></sub> − Id −
+                                <i>B</i><i>J</i><sub><i>C</i></sub>) +
+    (Id − <i>J</i><sub><i>C</i></sub>) .
+</br></br>
+
+Although this generalization is straightforward, they must be given the credit that the convergence analysis of this iteration is more delicate.
+They call it a “three operator splitting scheme”, which is regrettable because it should exactly be called forward-Douglas−Rachford. We would also have liked the “generalized generalized forward-backward”, but unfortunately the authors never heard of us. In fact, by reading their paper which makes no mention of our work, it seems that their operator comes out of nowhere.</br>
+
+</br>
+They could also have tried to illustrate numerically, or even discuss the possibility, of instances where such extension is practically useful. We may have found applications where this is the case. Well, sort of. Not really, actually, but it does remain true that the forward-Douglas−Rachford is more elegant than plain generalized forward-backward on these instances.</br>
+Everything is detailed in our <a href=A_Note_Forward-Douglas–Rachford_Splitting_Monotone_Inclusion_Convex_Optimization_HRaguet_2017.pdf>note</a>, where we notably specify the case with an arbitrary number of operators <i>A<sub>i</sub></i> and the use of preconditioners.
+C/C++ code, interfaced with Octave/Matlab, of the resulting method for typical signal processing and learning tasks can be found at the <a href="https://github.com/1a7r0ch3/CP_PFDR_graph_d1">dedicated GitHub repository</a>.
+
+</br>
+</br>
+</br>
+<div align="center">
+<a href=../index.html>Back To Home</a>
+</div>
+
+</html>
