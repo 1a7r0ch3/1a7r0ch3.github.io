@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css" media="all">
+	<title>Hugo Raguet - Cut-Pursuit for Nonsmooth Functionals</title>
+</head>
+
+<h1>Cut-Pursuit Algorithm for Regularizing Nonsmooth Functionals with Graph Total Variation</h1>
+
+<a href="https://loiclandrieu.com/">Loïc Landrieu's cut-pursuit algorithm</a> is a very efficient <i>working-set</i> approach for minimizing the sum of a differentiable functional with a <i>graph total variation</i> regularization (and also nonconvex variations thereof).
+</br>
+
+As many applications involve other nondifferentiable terms, we extended it to the minimization of functionals, structured over a weighted graph <i>G</i> = (<i>V</i>, <i>E</i>, <i>w</i>), of the form
+</br>
+</br>
+
+    <i>F</i>: <i>x</i> ↦ <i>f</i>(<i>x</i>) + ∑<sub><i>v</i> ∈ <i>V</i></sub> <i>g</i><sub><i>v</i></sub>(<i>x</i><sub><i>v</i></sub>) +
+ ∑<sub>(<i>u</i>,<i>v</i>) ∈ <i>E</i></sub> <i>w</i><sub>(<i>u</i>,<i>v</i>)</sub> ║<i>x</i><sub><i>u</i></sub> − <i>x</i><sub><i>v</i></sub>║ ,    
+</br>
+</br>
+
+where <i>x</i> ∈ ℍ<sup><i>V</i></sup> for some base vector space ℍ, <i>f</i> is differentiable, and for all <i>v</i> ∈ <i>V</i>, <i>g</i><sub><i>v</i></sub>: ℝ → ]−∞,+∞] admits <i>directional derivatives</i> on every points of its domain and every directions.
+</br>
+
+The cut-pursuit algorithm seeks partitions <i><b>V</b></i> = (<i>U</i><sub>1</sub>,...,<i>U</i><sub>|<i><b>V</b></i>|</sub>) of the set of vertices <i>V</i>, constituting the constant connected components of the solution, by successively solving the corresponding problem, structured over the reduced graph <i><b>G</b></i> = (<i><b>V</b></i>, <i><b>E</b></i>), that is
+</br>
+</br>
+
+  arg min<sub><i>ξ</i> ∈ ℍ<sup><i><b>V</b></i></sup></sub>
+    <i>F</i>(<i>x</i>) ,   such that ∀ <i>U</i> ∈ <i><b>V</b></i>, ∀ <i>u</i> ∈ <i>U</i>, <i>x</i><sub><i>u</i></sub> = <i>ξ</i><sub><i>U</i></sub> ,
+</br>
+</br>
+
+and then refining the partition, by using the directional derivatives and well-thought <i>graph cuts</i>.
+</br>
+
+A key requirement is thus the ability to solve the reduced problem, which often have the exact same structure as the original one, but with much less vertices |<i><b>V</b></i>| ≪ |<i>V</i>|. If the solution of the original problem has only few constant connected components in comparison to the number of vertices, the cut-pursuit strategy can speed-up minimization by several order of magnitude.
+</br>
+
+Indeed, our first numerical experiments show tremendous improvement over state-of-the-art proximal splitting methods:
+</br>
+
+<table>
+<tr>
+    <!--td class="main" style="border-right:solid 2px #328DAE;"-->
+    <td class="main">
+    medium-scale setting of brain source identification for electroencephalography (|<i>V</i>| = 19 626, |<i>E</i>| = 29 439), using <i>fused LASSO</i>
+    </br>
+    </br>
+    <div align=center><img src="EEG.png" height="300" title="benchmark EEG"></img></div>
+    </td>
+
+    <td class="main">
+    large-scale multidimensional setting of semantic labeling of 3D point cloud (|<i>V</i>| = 3 000 111, |<i>E</i>| = 17 206 938), using simplex-constraint convex relaxation
+    </br>
+    </br>
+    <div align=center><img src="label.png" height="300" title="benchmark labeling"></img></div>
+    </td>
+</tr>
+</table>
+
+Everything is detailed in our <a href="Cut-Pursuit_Algorithm_for_Regularizing_Nonsmooth_Functionals_with_Graph_Total_Variation__HRaguet_LLandrieu__preprint2018.pdf">preprint</a>.
+</br>
+
+C/C++ code, interfaced with Octave/Matlab, can be found at the <a href="https://github.com/1a7r0ch3/CP_PFDR_graph_d1">dedicated GitHub repository</a>.
+</br>
+
+This is a joint work with <a href="https://loiclandrieu.com/">Loïc Landrieu</a>.
+
+</br>
+</br>
+</br>
+<div align="center">
+<a href=../index.html>Back To Home</a>
+</div>
+</br>
+
+</html>
