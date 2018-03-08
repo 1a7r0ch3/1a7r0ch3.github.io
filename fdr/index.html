@@ -33,7 +33,7 @@ Now, for solving the monotone inclusion problem</br>
     find <i>x</i> ∈ zer{A + C} ,
 </br></br>
 
-when <i>C</i> does not have the required regularity of <i>B</i> above (in convex optimization, when it is also a subdifferential of a nonsmooth functional), one call call on the <b>Douglas‒Rachford</b> splitting algorithm, which is essentially the repeated application of the operator</br>
+when <i>C</i> does not have the required regularity of <i>B</i> above (in convex optimization, when it is also a subdifferential of a nonsmooth functional), one can call on the <b>Douglas‒Rachford</b> splitting algorithm, which is essentially the repeated application of the operator</br>
 
 </br>
     <i>T</i><sub>DR</sub> := 
@@ -74,7 +74,7 @@ Not long after, Briceño-Arias (2015) realizes one can replace the set <i>S</i> 
 in all generality, note the additional projection on <i>V</i>).
 Although he does not even attempt at showing instances where this might be useful, this apparently is enough to get a publication in <i>Optimization</i>. He does find a name much fancier than ours though: <b>forward-Douglas−Rachford</b>.
 Indeed, the operator <i>T</i><sub>GFB</sub> really looks like the fusion of <i>T</i><sub>FB</sub> and <i>T</i><sub>DR</sub>.</br>
-However, the analogy is not perfectly suitable yet, because one cannot tackle an additional arbitrary monotone operator <i>C</i> just as the Douglas−Rachford operator <i>T</i><sub>DR</sub> does. But comes along Davis and Yin (2015), realizing <i>an orthogonal projector 
+However, the analogy is not perfectly suitable yet, because one cannot tackle an additional arbitrary monotone operator <i>C</i> just as the Douglas−Rachford operator <i>T</i><sub>DR</sub> does. But come along Davis and Yin (2015), realizing that <i>an orthogonal projector 
 <i>P</i><sub><i>S</i></sub>
 is nothing but the resolvent of a normal cone
 <i>J</i><sub><i>N</i><sub><i>S</i></sub></sub>
