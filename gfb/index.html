@@ -13,7 +13,7 @@
 An algorithmic scheme for solving, over any real Hilbert space &#8459;, monotone inclusion problems of the form</br>
 
 <span class="aligned_eqn">
-find <i>x</i> &#8712; zer <span class="bigg">{</span><span class="in_sum"><span class="bigg">&#8721;</span><sub><i>i</i>=1</sub><sup><i>n</i></sup></span> <i>A<sub>i</sub></i> + <i>B</i>  <span class="bigg">}</span> ,</span>
+find <i>x</i> &#8712; zer <span class="bigg">(</span><span class="in_sum"><span class="bigg">&#8721;</span><sub><i>i</i>=1</sub><sup><i>n</i></sup></span> <i>A<sub>i</sub></i> + <i>B</i>  <span class="bigg">)</span> ,</span>
 
 where:</br>
 <ul>
@@ -29,7 +29,7 @@ where:</br>
 In particular, it enables minimization over &#8459; of convex problems of the form</br>
 
 <span class="aligned_eqn">
-find <i>x</i>&#8712; argmin <span class="bigg">{</span><span class="in_sum"><span class="bigg">&#8721;</span><sub><i>i</i>=1</sub><sup><i>n</i></sup></span>   <i>g<sub>i</sub></i> + <i>f</i> <span class="bigg">}</span> ,</span>
+find <i>x</i>&#8712; argmin <span class="in_sum"><span class="bigg">&#8721;</span><sub><i>i</i>=1</sub><sup><i>n</i></sup></span>   <i>g<sub>i</sub></i> + <i>f</i> ,</span>
 
 where:</br>
 <ul>
@@ -37,7 +37,7 @@ where:</br>
 	<li><i>f</i> is differentiable with Lipschitz-continuous gradient,</li>
 	<li>for all <i>i</i> &#8712; {1,&#8230;,n}, <i>g<sub>i</sub></i> is simple, in the sense that we can compute easily its proximity operator:
     <span class="inline-math">prox<sub><i>g<sub>i</sub></i></sub>: <i>x</i> &#8614; argmin<sub><i>y</i>&#8712;&#8459;</sub> &#8239;
-    <span class="bigg">{</span> <table class="in_frac"><tr><td class="num">1</td></tr><tr><td class="den">2</td></tr></table>||<i>x</i> &#8722; <i>y</i>||<sup>2</sup> + <i>g<sub>i</sub></i>(<i>y</i>) <span class="bigg">}</span> </span>.
+    <table class="in_frac"><tr><td class="num">1</td></tr><tr><td class="den">2</td></tr></table>||<i>x</i> &#8722; <i>y</i>||<sup>2</sup> + <i>g<sub>i</sub></i>(<i>y</i>) </span>.
     </li>
 </ul>
 </p>
@@ -55,7 +55,7 @@ Source code of numerical simulations used in the paper is not maintained anymore
 </br>
 A more complete version of this work can be found in chapters III and IV of my <a href=../phd/index.html>Ph.D. thesis</a>.
 </br>
-See also the <a href=../pgfb/index.html>preconditioned version</a>.
+See also the <a href=../pgfb/index.html>preconditioned version</a>, or the <a href=../fdr/index.html>forward-Douglas–Rachford version</a>.
 </br>
 
 
