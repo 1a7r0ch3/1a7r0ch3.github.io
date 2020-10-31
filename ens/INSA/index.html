@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Diaporama du cours magistral</title>
 
 		<link rel="stylesheet" href="reveal.js/dist/reset.css">
 		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
@@ -107,6 +107,19 @@
 			Reveal.initialize({
 				hash: true,
                 transition: "none",
+
+                multiplex: {
+                // Example values. To generate your own, see the socket.io server instructions.
+                secret: null, // null so the clients do not have control of the master presentation
+                id: '4c667ca3b4c9186e', // id, obtained from socket.io server
+                url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+              },
+
+              // Don't forget to add the dependencies
+              dependencies: [
+                { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+                { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+              ]
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				// plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
