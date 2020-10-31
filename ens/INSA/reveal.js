@@ -1,0 +1,1 @@
+/home/latroche/.npm-packages/lib/node_modules/reveal.js
