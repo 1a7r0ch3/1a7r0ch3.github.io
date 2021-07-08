@@ -36,7 +36,7 @@ The cut-pursuit algorithm seeks partitions <i><b>V</b></i> = (<i>U</i><sub>1</su
 and then refining the partition, by using the directional derivatives and well-thought <i>graph cuts</i>.
 </br>
 
-A key requirement is thus the ability to solve the reduced problem, which often have the exact same structure as the original one, but with much less vertices |<i><b>V</b></i>| ≪ |<i>V</i>|. If the solution of the original problem has only few constant connected components in comparison to the number of vertices, the cut-pursuit strategy can speed-up minimization by several order of magnitude.
+A key requirement is thus the ability to solve the reduced problem, which often have the exact same structure as the original one, but with much less vertices |<i><b>V</b></i>| ≪ |<i>V</i>|. If the solution of the original problem has only few constant connected components in comparison to the number of vertices, the cut-pursuit strategy can speed-up minimization by several orders of magnitude.
 </br>
 
 Indeed, our first numerical experiments show tremendous improvement over state-of-the-art proximal splitting methods:
@@ -44,7 +44,6 @@ Indeed, our first numerical experiments show tremendous improvement over state-o
 
 <table>
 <tr>
-    <!--td class="main" style="border-right:solid 2px #328DAE;"-->
     <td class="main">
     medium-scale setting of brain source identification for electroencephalography (|<i>V</i>| = 19 626, |<i>E</i>| = 29 439), using <i>fused LASSO</i>
     </br>
@@ -70,7 +69,7 @@ More details can be found in our
 <a href="Cut-Pursuit_Algorithm_for_Regularizing_Nonsmooth_Functionals_with_Graph_Total_Variation__HRaguet_LLandrieu__preprint2018.pdf" download>preprint</a>.
 </br>
 
-Optimized C++ implementations, interfaced with GNU Octave or Matlab and Python, can be found at the <a href="https://github.com/1a7r0ch3/parallel-cut-pursuit">dedicated GitHub repository</a>.
+Optimized C++ implementations, interfaced with GNU Octave or Matlab and Python, can be found at the <a href="https://gitlab.com/1a7r0ch3/parallel-cut-pursuit">dedicated GitLab repository</a>.
 </br>
 
 This is a joint work with <a href="https://loiclandrieu.com/">Loïc Landrieu</a>.

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css" media="all">
+	<title>Hugo Raguet - Software for live remote lecture</title>
+</head>
+
+<h1>Sparing and free visual supports for live remote lecture</h1>
+
+<h2>Context</h2>
+
+<p>During the COVID-19 pandemic, researchers and teachers in many countries have been forced to work remotely .
+In the current socio-technological paradigm, people tend to believe that one can easily replace physical presence and material by telecommunications and numeric tools.
+In this spirit, many researchers and teachers used online videoconferences for replacing physical meeting or classroom.</p>
+
+<p>For certain cases, such as pedagogical acts directed towards young students, or large group of students, this seems to be a failure.
+For other cases, such as professional meetings or international research conferences, this seems to be a great opportunity to reduce the financial and ecological cost of such events.
+But in any case, one can regret that relying on videoconference presents important drawbacks.
+The numerical format of videos, that is a stream of several images per second either captured by a camera or a graphical application, is not really adapted to visual supports in most situations, the main reason being that it requires a great deal of network and computing resources.</p>
+
+<p>One important consequence concerns ecology, accessibility and freedom.
+Ecology because powerful hardware and networks demand rare materials, big infrastructures and energy.
+Accessibility because not everyone has access to these resources.
+Freedom because so far, institutions which are able to serve large-scale and user-friendly videoconferences are all private corporations, running proprietary software on their own hardware; both hardware and software over which the end user has no practical control.</p>
+
+<p>It is a fact that most of the French higher education and public research during the academic year 2020–2021 heavily relied on Zoom and Teams, in spite of <a href="https://www.cnil.fr/fr/la-cnil-appelle-evolutions-dans-utilisation-outils-collaboratifs-etatsuniens-enseignement-superieur-recherche">official recommendations</a> against it.</p>
+
+<p>Currently, videoconference is actually so resource demanding that, more often than not, users still experience latency and mediocre resolution images. At the very least, it would be more judicious to broadcast actual character stream for text and scalable vector graphics for drawings.</p>
+
+<h2>Software</h2>
+
+<p>For these reasons, I wrote a software providing sparing and free visual supports for live remote lecture.
+It is a very simple Node.js server relying on socket.io for interactions and communications, with the following tools.</p>
+
+<p>
+<ul>
+<li>Editable beamer slideshow: live broadcast of slides, which can be edited with simple drawing tools. Users of stylus can display blank slides and use them as a series of small, fixed whiteboards. Drawing tools are built upon source code of the online collaborative whiteboard <a href="https://github.com/lovasoa/whitebophir">WBO</a>.</li>
+<li>Formatted textboard: live display of text, possibly formatted with HTML tags, including source code formatting with <a href="https://prismjs.com/">Prism</a> and math display with <a href="https://mathscribe.com/author/jqmath.html">jQmath</a>.</li>
+<li>Virtual terminal: live display of a virtual terminal, using <a href="https://github.com/xtermjs/xterm.js">Xterm.js</a>.</li>
+</ul>
+</p>
+
+Complete source code and some documentation be found in the <a href="https://gitlab.com/1a7r0ch3/remote-lecture">dedicated GitLab repository</a>.
+
+<p>In its current state, it is only a proof of concept and not a software ready for deployment, but it can readily be used by anyone with a port open to the world wide web; I even hosted it at home, serving tens of students with a simple ADSL Internet connection.</p>
+
+<p>Moreover, note that these tools are designed to be used in conjunction with a voice over IP software, providing vocal interaction between the lecturer and the audience. Light and free solutions readily exist, see in particular <a href="https://www.mumble.info/">Mumble</a></p>
+
+</br>
+</br>
+</br>
+<div align="center">
+<a href=../index.html>Retour à l'accueil | <i>Back To Home</i></a>
+</div>
+</br>
+
+</html>
