@@ -55,7 +55,11 @@ I presented the context and the tool, more from a teaching point of view, at the
 
 <h2>Screenshots</h2>
 
+</br>
+
 <h3>Editable beamer slide show</h3>
+
+</br>
 
 <table>
 <tr>
@@ -64,6 +68,70 @@ I presented the context and the tool, more from a teaching point of view, at the
 </tr>
 <tr><td align="center">Lecturer interface</td><td align="center">Listener view</td></tr>
 </table>
+
+</br>
+
+<h3>Formatted textboard</h3>
+
+</br>
+
+<div align="center">
+Textboard
+</br>
+
+<table width=75%>
+<tr><td align="center"><img src="remote_textboard.png" width="100%"/></td></tr>
+</table>
+</br>
+
+Excerpts of corresponding generating text files
+</br>
+</br>
+
+<table width=75%>
+<tr><td width="50%" style="font-family: monospace; white-space: pre-wrap; font-size: x-small;border-right: solid 1px">&lt;b>Exercice 30&lt;/b>
+&lt;br/>
+&lt;br/>
+
+Suite de Fibonacci : $u_0 = u_1 = 1$ et $∀ n ≥ 2, u_n = u_{n - 1} + u_{n - 2}$.
+&lt;br/>
+&lt;br/>
+
+(a) Il s'agit d'une &lt;i>suite récurrente linéaire d'ordre deux&lt;/i>,
+de polynôme caractéristique $X^2 - X - 1$, dont les racines sont
+$r_1 = {1 -  √{5}}/{2}$ et $r_2 = {1 + √{5}}/{2} = φ$ (le nombre d'or).
+Or $│r_1│ &lt; 1$, donc ${r_1}^{n} {→}↙{n → +∞} 0$, et on déduit 
+$u_n = \Θ(φ^{n})$.
+&lt;br/>
+&lt;br/>
+
+(b)
+&lt;pre>&lt;code class="lang-pseudo">
+Algorithme Fibonacci : n → u selon
+    Si n ≤ 1 alors u ← 1
+    sinon u ← Fibonacci(n − 1) + Fibonacci(n − 2) .
+.
+&lt;/code>&lt;/pre>
+&lt;br/></td>
+<td valign="top" width="50%" style="font-family: monospace; white-space: pre-wrap; font-size: x-small;">Pour étudier expérimentalement ce qui précède, traduisons l'algorithme en langage C, qui permet les formulations récursives.
+
+&lt;pre>&lt;code class="lang-c">
+int fibonacci(int n)
+{
+    if (n &lt;= 1){
+        return 1;
+    }else{
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+&lt;/code>&lt;/pre>
+
+&lt;br/>
+
+(c) Si l'on veut écrire une version itérative de cet algorithme,</td>
+</tr>
+</table>
+</div>
 
 </br>
 </br>
